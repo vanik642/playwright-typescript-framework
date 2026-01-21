@@ -18,13 +18,26 @@ export default defineConfig({
   /* Fail the build on CI if you accidentally left test.only in the source code. */
   forbidOnly: !!process.env.CI,
   /* Retry on CI only */
-  retries: process.env.CI ? 2 : 0,
+  //retries: process.env.CI ? 2 : 0,
   /* Opt out of parallel tests on CI. */
   workers: process.env.CI ? 1 : undefined,
   /* Reporter to use. See https://playwright.dev/docs/test-reporters */
   reporter: [
     ['html'],
-    ['allure-playwright']
+    ['list'],
+    ['allure-playwright'],
+    ['playwright-html-reporter', { 
+      testFolder: 'tests',
+      title: 'OPEN CART HTML Report',
+      project: 'QA Tests',
+      release: '9.87.6',
+      testEnvironment: 'DEV',
+      embedAssets: true,
+      embedAttachments: true,
+      outputFolder: 'playwright-html-report',
+      minifyAssets: true,
+      startServer: false,
+    }]
   ],
   /* Shared settings for all the projects below. See https://playwright.dev/docs/api/class-testoptions. */
   use: {
@@ -33,7 +46,7 @@ export default defineConfig({
 
     /* Collect trace when retrying the failed test. See https://playwright.dev/docs/trace-viewer */
     trace: 'on-first-retry',
-    headless:false,
+    headless:true,
     screenshot:'on-first-failure',
     video:'on',
     baseURL:'https://naveenautomationlabs.com/opencart/index.php', 
@@ -57,34 +70,34 @@ export default defineConfig({
       }
     },
 
-    {
-      name: 'Microsoft Edge',
-      use: { 
-        channel:'msedge',
-        viewport:null,
-        launchOptions:{
-          args:['--start-maximized'],
-          ignoreDefaultArgs:['--window-size=1280,720']
-        }
-    }
-    },
+    // {
+    //   name: 'Microsoft Edge',
+    //   use: { 
+    //     channel:'msedge',
+    //     viewport:null,
+    //     launchOptions:{
+    //       args:['--start-maximized'],
+    //       ignoreDefaultArgs:['--window-size=1280,720']
+    //     }
+    // }
+    // },
 
-    {
-      name: 'Firefox',
-      use: { 
-        browserName:'firefox',
-        viewport:{width:1920,height:1080},
-        launchOptions:{
-          args:[],
-          ignoreDefaultArgs:['--window-size=1280,720']
-        }
-    }
-    },
+    // {
+    //   name: 'Firefox',
+    //   use: { 
+    //     browserName:'firefox',
+    //     viewport:{width:1920,height:1080},
+    //     launchOptions:{
+    //       args:[],
+    //       ignoreDefaultArgs:['--window-size=1280,720']
+    //     }
+    // }
+    // },
 
-    {
-      name: 'webkit',
-      use: { ...devices['Desktop Safari'] },
-    },
+    // {
+    //   name: 'webkit',
+    //   use: { ...devices['Desktop Safari'] },
+    // },
 
     /* Test against mobile viewports. */
     // {

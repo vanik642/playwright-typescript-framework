@@ -2,7 +2,7 @@
 import { LoginPage } from '../pages/LoginPage.js'
 import { test, expect } from '../fixtures/baseFixtures.js'
 
-test('verify valid login @login ',
+test('verify valid login test @login ',
 
   {
     annotation: [
