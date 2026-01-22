@@ -5,12 +5,10 @@
   "main": "index.js",
   "scripts": {
     "test": "npx playwright test",
-
     "test:smoke": "playwright test --grep @smoke",
     "test:regression": "playwright test --grep @regression",
     "test:critical": "playwright test --grep @critical",
     "test:no-flaky": "playwright test --grep-invert @smoke",
-
     "test:qa": " npx playwright test tests/productInfo.spec.ts --config=playwright.config.qa.ts",
     "test:stage": " npx playwright test tests/productInfo.spec.ts --config=playwright.config.stage.ts",
     "test:prod": " npx playwright test tests/productInfo.spec.ts --config=playwright.config.prod.ts",
@@ -32,8 +30,7 @@
     "@typescript-eslint/parser": "^7.0.0",
     "allure-commandline": "^2.34.1",
     "allure-playwright": "^3.4.2",
-    "eslint": "^8.57.0",
-    "playwright-html-reporter": "^0.1.11"
+    "eslint": "^8.57.1"
   },
   "dependencies": {
     "csv-parse": "^6.1.0"
