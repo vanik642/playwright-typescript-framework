@@ -30,9 +30,12 @@
     "@typescript-eslint/parser": "^7.0.0",
     "allure-commandline": "^2.34.1",
     "allure-playwright": "^3.4.2",
-    "eslint": "^8.57.1"
+    "eslint": "^8.57.1",
+     "playwright-html-reporter": "^0.1.11"
   },
   "dependencies": {
-    "csv-parse": "^6.1.0"
+    "ajv": "^8.17.1",
+    "csv-parse": "^6.1.0",
+    "jsonpath-plus": "^10.3.0"
   }
 }
