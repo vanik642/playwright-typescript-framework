@@ -668,7 +668,7 @@ jobs:
           <!DOCTYPE html>
           <html>
           <head>
-            <title>Playwright Test Reports - June2025PWFramework</title>
+            <title>Playwright Test Reports - PlaywrightTypescriptFramework</title>
             <style>
               body { font-family: Arial, sans-serif; max-width: 900px; margin: 50px auto; padding: 20px; }
               h1 { color: #2c3e50; border-bottom: 3px solid #3498db; padding-bottom: 10px; }
@@ -756,11 +756,6 @@ jobs:
           echo "   Playwright: https://vanik642.github.io/playwright-typescript-framework/stage/playwright-report/index.html"
           echo "   HTML:       https://vanik642.github.io/playwright-typescript-framework/stage/playwright-html-report/index.html"
           echo "   Allure:     https://vanik642.github.io/playwright-typescript-framework/stage/allure-report/index.html"
-          echo ""
-          echo "🚀 PROD Reports:"
-          echo "   Playwright: https://vanik642.github.io/playwright-typescript-framework/prod/playwright-report/index.html"
-          echo "   HTML:       https://vanik642.github.io/playwright-typescript-framework/prod/playwright-html-report/index.html"
-          echo "   Allure:     https://vanik642.github.io/playwright-typescript-framework/prod/allure-report/index.html"
           echo ""
           echo "============================================"
 
