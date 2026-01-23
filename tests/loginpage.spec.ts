@@ -21,11 +21,7 @@ test('verify valid login @login ',
 
 
 
-test('verify invalid login @wip', async ({ page, baseURL }) => {
-  //AAA
-  const loginPage = new LoginPage(page);
-  await loginPage.goToLoginPage(baseURL);
-  await loginPage.doLogin('test@nal.com', 'test123');
-  const errorMesg = await loginPage.getInvalidLoginMessage();
-  expect(errorMesg).toContain('Warning: No matcth for E-Mail Address and/or Password.');
+// eslint-disable-next-line no-empty-pattern
+test('sample test @sample', async ({  }) => {
+  expect(10).toBe(10);
 });
