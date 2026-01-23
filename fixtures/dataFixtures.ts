@@ -14,7 +14,7 @@ type RegData = {
 
 //let registerationData: RegData[] = JSON.parse(fs.readFileSync('./data/register.json', 'utf-8'));
 
-const fileContent=fs.readFileSync('./data/register.csv','utf-8');
+//const fileContent=fs.readFileSync('./data/register.csv','utf-8');
 // const registrationData:RegData[]=parse(fileContent,{
 //     columns:true,
 //     skip_empty_lines:true
