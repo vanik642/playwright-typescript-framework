@@ -1,6 +1,6 @@
-import { Page, Locator } from '@playwright/test'
+import { Page, Locator } from '@playwright/test';
 import { ElementUtil } from '../utils/ElementUtil.js';
-import {ProductInfoPage} from '../pages/ProductInfoPage.js'
+import {ProductInfoPage} from '../pages/ProductInfoPage.js';
 
 export class ResultsPage{
 
@@ -28,7 +28,7 @@ export class ResultsPage{
     }
 
     async selectTheProduct(productName:string){
-        console.log("=========product name:======="+productName);
+        console.log('=========product name:======='+productName);
         this.eleUtil.click(this.page.getByRole('link',{name:`${productName}`}));
         return new ProductInfoPage(this.page);
 

@@ -1,4 +1,4 @@
-import {test as base,expect} from '@playwright/test'
+import {test as base,expect} from '@playwright/test';
 import {HomePage} from '../pages/HomePage.ts';
 import {LoginPage} from '../pages/LoginPage.ts'
 
@@ -28,4 +28,4 @@ export const test=base.extend<myFixtures>({
 })
 
 
-export {expect }
+export {expect };

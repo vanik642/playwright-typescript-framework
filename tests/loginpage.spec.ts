@@ -1,6 +1,6 @@
 
-import { LoginPage } from '../pages/LoginPage.js'
-import { test, expect } from '../fixtures/baseFixtures.js'
+import { LoginPage } from '../pages/LoginPage.js';
+import { test, expect } from '../fixtures/baseFixtures.js';
 
 test('verify valid login @login ',
 
@@ -23,7 +23,7 @@ test('verify valid login @login ',
 
 test('verify invalid login @wip', async ({ page, baseURL }) => {
   //AAA
-  let loginPage = new LoginPage(page);
+  const loginPage = new LoginPage(page);
   await loginPage.goToLoginPage(baseURL);
   await loginPage.doLogin('test@nal.com', 'test123');
   const errorMesg = await loginPage.getInvalidLoginMessage();

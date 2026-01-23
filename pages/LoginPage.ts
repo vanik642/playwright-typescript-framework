@@ -1,7 +1,6 @@
-import { Page, Locator } from '@playwright/test'
+import { Page, Locator } from '@playwright/test';
 import { ElementUtil } from '../utils/ElementUtil.js';
-import {HomePage} from '../pages/HomePage.js'
-import { time } from 'console';
+import {HomePage} from '../pages/HomePage.js';
 import { RegisterPage } from './RegisterPage.js';
 
 export class LoginPage {
@@ -24,7 +23,7 @@ export class LoginPage {
         this.eleUtil = new ElementUtil(page);
         this.emailId = page.getByRole('textbox', { name: 'E-Mail Address' });
         this.password = page.getByRole('textbox', { name: 'Password' });
-        this.loginButton = page.locator(`input[type="submit"][value="Login"]`);
+        this.loginButton = page.locator('input[type="submit"][value="Login"]');
         this.warningMessage = page.locator('.alert.alert-danger.alert-dismissible');
         this.registration=page.getByRole('link', { name: 'Register' });
 
@@ -36,7 +35,7 @@ export class LoginPage {
     // }
 
     async goToLoginPage(baseURL:string|undefined) {
-        await this.page.goto(baseURL+'?route=account/login')
+        await this.page.goto(baseURL+'?route=account/login');
     }
 
     // async doLogin(email:string,password:string){

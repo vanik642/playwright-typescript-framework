@@ -1,4 +1,4 @@
-import { Locator, Page, expect } from '@playwright/test';
+import { Locator, Page } from '@playwright/test';
 import { ElementUtil } from '../utils/ElementUtil.js';
 
 
@@ -53,7 +53,7 @@ export class RegisterPage {
         await this.eleUtil.fill(this.passwordInput, password);
         await this.eleUtil.fill(this.confirmPasswordInput, password);
 
-        if (subscribeNewsletter === "Yes") {
+        if (subscribeNewsletter === 'Yes') {
             await this.eleUtil.click(this.newsletterYesRadio);
         } else {
             await this.eleUtil.click(this.newsletterNoRadio);

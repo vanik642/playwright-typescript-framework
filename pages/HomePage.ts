@@ -1,7 +1,7 @@
-import { Page, Locator } from '@playwright/test'
+import { Page, Locator } from '@playwright/test';
 import { ElementUtil } from '../utils/ElementUtil.js';
-import {LoginPage} from '../pages/LoginPage.js'
-import {ResultsPage} from '../pages/ResultsPage.js'
+import {LoginPage} from '../pages/LoginPage.js';
+import {ResultsPage} from '../pages/ResultsPage.js';
 
 export class HomePage{
     

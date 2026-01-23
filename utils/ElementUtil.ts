@@ -1,5 +1,5 @@
 
-import { Page, Locator } from '@playwright/test'
+import { Page, Locator } from '@playwright/test';
 
 type flexibleLocator = string | Locator;
 
@@ -187,7 +187,7 @@ export class ElementUtil {
      * @param timeout 
      * @returns 
      */
-    async isEnabled(locator: flexibleLocator, timeout: number = 5000): Promise<boolean> {
+    async isEnabled(locator: flexibleLocator): Promise<boolean> {
 
         return await this.getLocator(locator).isEnabled();
     }
